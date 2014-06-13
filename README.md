@@ -1,14 +1,15 @@
 Graffiti City
 =============
 
-A very simple map that displays reported cases of destruction of property with paint, aka graffiti art, throughout the city of San Francisco.
+A very simple map that displays reported cases of destruction of property with paint, aka graffiti art, throughout the city of San Francisco. This uses public data available at [data.sfgov.org](https://data.sfgov.org/).
 
 [Check it out](http://damiann.github.io/graffiti-city/)
 
-## Using
+## Use
 
-- [data.sfgov.org](https://data.sfgov.org/)
- 
+- Green pin = open case (open to get more information regarding the case)
+- Grey pin = closed case
+
 ## Todo
 
 - Mobile optimize
