@@ -1,7 +1,9 @@
 Graffiti City
 =============
 
-A very simple map that displays reported cases of destruction of property with paint (aka graffiti art) through out the city of San Francisco.
+A very simple map that displays reported cases of destruction of property with paint, aka graffiti art, throughout the city of San Francisco.
+
+[Check it out](http://damiann.github.io/graffiti-city/)
 
 ## Using
 
