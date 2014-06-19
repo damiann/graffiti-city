@@ -117,7 +117,7 @@ function set_markers(map) {
           var marker = new google.maps.Marker({
             position: new google.maps.LatLng(lat,long),
             map: map,
-            icon: 'http://i.imgur.com/nehiNX7.png',
+            icon: 'media/closed.png',
             title: 'Closed'
           });
         } 
@@ -176,7 +176,7 @@ function set_markers(map) {
           var marker = new google.maps.Marker({
             position: new google.maps.LatLng(lat,long),
             map: map,
-            icon: 'http://i.imgur.com/EbdpbLm.png',
+            icon: 'media/active.png',
             title: 'Click for Info'
           });
 
