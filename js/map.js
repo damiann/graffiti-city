@@ -86,7 +86,7 @@ $(function() {
 
   map.setMapTypeId('graffiticity');
 
-  set_markers(map);
+  addMarkers(map);
 });
         
 var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
@@ -97,29 +97,24 @@ var icons = {
   }
 };
 
-function addMarker(f) {
-  var marker = new google.maps.Marker({
-    position: f.position,
-    icon: icons[f.type].icon,
-    map: map
-  });
-}
 
-function set_markers(map) {
+function addMarkers(map) {
   // Public data
   $.getJSON('http://data.sfgov.org/resource/p6sg-7yp7.json', function(data) {
       data.forEach(function(item) {
         console.log(item);
         var lat = item.position.latitude;
-        var long = item.position.longitude; 
+        var lon = item.position.longitude; 
 
         if (item.status === "Closed") { // closed reports
+        
           var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(lat,long),
+            position: new google.maps.LatLng(lat,lon),
             map: map,
             icon: 'media/closed.png',
             title: 'Closed'
           });
+          
         } 
         else { // active reports
 
@@ -160,7 +155,7 @@ function set_markers(map) {
             }
           }
 
-          // More style?
+          // More styling?
           var contentString =
             '<h2>Case ID: '+case_id+'</h2>'+
             '<ul>'+
@@ -174,7 +169,7 @@ function set_markers(map) {
 
 
           var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(lat,long),
+            position: new google.maps.LatLng(lat,lon),
             map: map,
             icon: 'media/active.png',
             title: 'Click for Info'
